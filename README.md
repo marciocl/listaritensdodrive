@@ -3,13 +3,16 @@
 //digitar na barra de busca (logado no google), "sheets.new" abrirá uma nova aba do Google planilhas.
 // Ir em ferramentas > <> Editor de Script e inserir esse código abaixo dar play e dar as devidas permissões e Pronto \0/
 
+```javascript
 function onOpen() {  
   // Cria uma opção no menu
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var searchMenuEntries = [ {name: "Executar", functionName: "listFiles"}];
   ss.addMenu("Listar arquivos", searchMenuEntries);
 }
- 
+```
+
+```javascript
 function listFiles() {
   // Recupera a planilha e a aba ativas
   var ss = SpreadsheetApp.getActiveSpreadsheet();
@@ -37,5 +40,5 @@ function listFiles() {
     i++;
   }
 }
-
+```
 
